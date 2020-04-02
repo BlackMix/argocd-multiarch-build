@@ -3,6 +3,9 @@ sudo: required
 services:
 - docker
 
+before_install:
+  - chmod +x build.sh
+
 language: go
 
 go:
