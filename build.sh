@@ -167,8 +167,8 @@ build_aws_iam_authenticator() {
     echo "Download dep tool"
     wget https://github.com/golang/dep/releases/download/v0.5.0/dep-linux-amd64 -O dep && chmod 755 dep
 
-    git reset --hard
-    git checkout ${AWS_IAM_AUTHENTICATOR_VERSION}
+    #git reset --hard
+    #git checkout ${AWS_IAM_AUTHENTICATOR_VERSION}
     ./dep ensure
     echo "Fix go dependencies"
     for arch in arm arm64; do
