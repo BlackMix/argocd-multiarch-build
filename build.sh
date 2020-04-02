@@ -139,7 +139,7 @@ build_kustomize_dependencies() {
     echo "################################"
     local github_pkg="github.com/kubernetes-sigs/kustomize"
     SRC_DIR=${PWD}
-    KUSTOMIZE_VERSION=kyaml/v0.1.3
+    KUSTOMIZE_VERSION=0.1.3
     set +e
     go get ${github_pkg}
     set -e
