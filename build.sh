@@ -1,7 +1,7 @@
 #! /bin/bash
 set -e
 
-export IMG_NAME=cyrilix/argocd
+export IMG_NAME=blackmix/argocd
 export VERSION=1.5.0-rc3
 export MAJOR_VERSION=1.5
 export DOCKER_CLI_EXPERIMENTAL=enabled
