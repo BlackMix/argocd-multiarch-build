@@ -145,8 +145,8 @@ build_kustomize_dependencies() {
     set -e
     cd ${GOPATH}/src/${github_pkg}
 
-    git reset --hard
-    git checkout v${KUSTOMIZE_VERSION}
+    #git reset --hard
+    #git checkout v${KUSTOMIZE_VERSION}
     for arch in arm arm64; do
         echo "Build ${arch} binary ${KUSTOMIZE_VERSION}"
         GOARCH=${arch} go build -o kustomize cmd/kustomize/main.go && mv kustomize ${PROJECT_DIR}/kustomize.${arch}
