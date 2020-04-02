@@ -169,7 +169,7 @@ build_aws_iam_authenticator() {
 
     #git reset --hard
     #git checkout ${AWS_IAM_AUTHENTICATOR_VERSION}
-    ./dep ensure
+    #./dep ensure
     echo "Fix go dependencies"
     for arch in arm arm64; do
         echo "Build ${arch} binary ${AWS_IAM_AUTHENTICATOR_VERSION}"
