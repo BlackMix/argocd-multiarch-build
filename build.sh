@@ -30,13 +30,19 @@ init_qemu() {
 }
 
 fetch_sources() {
+    echo "#############"
+    echo "# Download ArgoCD #"
+    echo "#############"
     mkdir -p ${GOPATH}/src
 
     if [[ ! -d  ${PROJECT_DIR} ]] ;
     then
         git clone https://github.com/argoproj/${PROJECT_NAME}.git ${GOPATH}/src/${PROJECT_NAME}
     fi
-    cd ${PROJECT_DIR}
+    cd ${GOPATH}/src/${PROJECT_NAME}
+    echo "#############"
+    echo "# Check ArgoCD #"
+    echo "#############"
     git reset --hard
     git checkout v${VERSION}
 }
