@@ -121,7 +121,7 @@ build_ksonnet_dependencies() {
 
     echo "./go" >> .dockerignore
     SRC_DIR=${PWD}
-    KSONNET_VERSION=$(grep KSONNET_VERSION= ${PROJECT_DIR}/Dockerfile | cut -f 2 -d=)
+    KSONNET_VERSION=0.13.1
     set +e
     go get github.com/ksonnet/ksonnet
     set -e
