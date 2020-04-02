@@ -139,7 +139,7 @@ build_kustomize_dependencies() {
     echo "################################"
     local github_pkg="github.com/kubernetes-sigs/kustomize"
     SRC_DIR=${PWD}
-    KUSTOMIZE_VERSION=$(grep KUSTOMIZE_VERSION= ${PROJECT_DIR}/Dockerfile | cut -f 2 -d=)
+    KUSTOMIZE_VERSION=kyaml/v0.1.3
     set +e
     go get ${github_pkg}
     set -e
@@ -159,7 +159,7 @@ build_aws_iam_authenticator() {
     echo "############################################"
     local github_pkg="github.com/kubernetes-sigs/aws-iam-authenticator"
     SRC_DIR=${PWD}
-    AWS_IAM_AUTHENTICATOR_VERSION=$(grep  AWS_IAM_AUTHENTICATOR_VERSION= ${PROJECT_DIR}/Dockerfile | cut -f 2 -d=)
+    AWS_IAM_AUTHENTICATOR_VERSION=0.5.0
     set +e
     go get ${github_pkg}
     set -e
