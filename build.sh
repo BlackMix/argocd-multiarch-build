@@ -2,8 +2,8 @@
 set -e
 
 export IMG_NAME=blackmix/argocd
-export VERSION=1.5.0-rc3
-export MAJOR_VERSION=1.5
+export VERSION=1.5.0
+export MAJOR_VERSION=1.5.0
 export DOCKER_CLI_EXPERIMENTAL=enabled
 export DOCKER_USERNAME=blackmix
 
@@ -37,7 +37,7 @@ fetch_sources() {
 
     if [[ ! -d  ${PROJECT_DIR} ]] ;
     then
-        git clone https://github.com/argoproj/${PROJECT_NAME}.git ${GOPATH}/src/${PROJECT_NAME}
+        git clone -b master https://github.com/argoproj/${PROJECT_NAME}.git ${GOPATH}/src/${PROJECT_NAME}
     fi
     cd ${GOPATH}/src/${PROJECT_NAME}
     echo "#############"
